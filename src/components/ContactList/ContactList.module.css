@@ -1,0 +1,24 @@
+.list_container {
+  font-size: 20px;
+}
+
+.contactsList {
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactsItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactBtn {
+  margin-left: 10px;
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

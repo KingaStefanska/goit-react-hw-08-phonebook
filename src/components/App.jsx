@@ -1,31 +1,39 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ContactForm from './ContactForm/ContactForm';
-import ContactList from './ContactList/ContactList';
-import Filter from './Filter/Filter';
-import { fetchContacts } from 'redux/operations';
-import { getIsLoading, getError } from 'redux/selectors';
-import css from './App.module.css';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import Contacts from 'pages/Contacts';
+import Login from 'pages/Login';
+import Register from 'pages/Register';
+import { refreshUser } from 'redux/operations';
+import { getIsLogged } from 'redux/selectors';
 
-const App = () => {
+function App() {
+  const isLogged = useSelector(getIsLogged);
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return (
-    <div className={css.container}>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <Filter />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <ContactList />
-    </div>
+    <>
+      <div>
+        <section>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                isLogged ? <Contacts /> : <Navigate replace to={'login'} />
+              }
+            />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+          </Routes>
+        </section>
+      </div>
+    </>
   );
-};
+}
 
 export default App;

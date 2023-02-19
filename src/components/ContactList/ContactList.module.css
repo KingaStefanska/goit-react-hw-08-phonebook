@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.p {
+  color: #813dc6;
+}
+
 .contactBtn {
   margin-left: 10px;
   width: 70px;
@@ -21,4 +25,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background-color: #813dc6;
+}
+
+input {
+  margin-top: 10px;
 }

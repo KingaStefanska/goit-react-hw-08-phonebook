@@ -6,6 +6,7 @@ import Login from 'pages/Login';
 import Register from 'pages/Register';
 import { refreshUser } from 'redux/operations';
 import { getIsLogged } from 'redux/selectors';
+import css from './App.module.css';
 
 function App() {
   const isLogged = useSelector(getIsLogged);
@@ -18,7 +19,7 @@ function App() {
   return (
     <>
       <div>
-        <section>
+        <section className={css.container}>
           <Routes>
             <Route
               exact

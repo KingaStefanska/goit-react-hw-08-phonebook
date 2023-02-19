@@ -23,7 +23,7 @@ const ContactList = () => {
           {filteredContacts.map(contact => {
             return (
               <li className={css.contactsItem} key={contact.id}>
-                <p>
+                <p className={css.p}>
                   {contact.name}: {contact.number}
                 </p>
                 <button

@@ -20,6 +20,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background-color: #813dc6;
 }
 
 .formBtn:hover {

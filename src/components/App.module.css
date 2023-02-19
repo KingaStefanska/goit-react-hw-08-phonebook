@@ -1,4 +1,12 @@
 .container {
+  background: rgb(34, 195, 181);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 195, 181, 1) 0%,
+    rgba(214, 45, 253, 0.6177870806525736) 89%
+  );
+  width: 100%;
+  height: 100vh;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -13,4 +21,13 @@
 
 ul {
   list-style: none;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #813dc6;
+  font-weight: 700;
 }

@@ -53,11 +53,13 @@ const Login = () => {
             />
           </div>
           <div>
-            <button type="submit">Login</button>
+            <button className="buttonLogin" type="submit">
+              Login
+            </button>
           </div>
         </form>
 
-        <p>
+        <p className="loginText">
           No account yet? <NavLink to="/register">Register</NavLink>
         </p>
       </div>

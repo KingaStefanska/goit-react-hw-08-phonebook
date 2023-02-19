@@ -63,10 +63,12 @@ const Register = () => {
             />
           </div>
           <div>
-            <button type="submit">Register</button>
+            <button className="buttonRegister" type="submit">
+              Register
+            </button>
           </div>
         </form>
-        <p>
+        <p className="registerText">
           Already have an account? <NavLink to="/login">Login</NavLink>
         </p>
       </div>
